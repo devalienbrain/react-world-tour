@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Country from "../Country/Country";
 import "./countries.css";
 
-const Countries = () => {
+const Countries = ({ showCountryDetails }) => {
   // To load api data: declare state
   const [countries, setCountries] = useState([]);
 
@@ -18,7 +18,11 @@ const Countries = () => {
       <h3>Countries: Total {countries.length}</h3>
       <div className="countries-container">
         {countries.map((country) => (
-          <Country key={country.cca2} country={country}></Country>
+          <Country
+            showCountryDetails={showCountryDetails}
+            key={country.cca2}
+            country={country}
+          ></Country>
         ))}
       </div>
     </div>

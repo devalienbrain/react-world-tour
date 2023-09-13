@@ -1,10 +1,6 @@
 import "./country.css";
 
-const Country = ({ country }) => {
-  // console.log(country);
-  const showCountryDetails = (country) => {
-    console.log(country);
-  };
+const Country = ({ country, showCountryDetails }) => {
   const { name, flags } = country;
   return (
     <div onClick={() => showCountryDetails(country)} className="container">
